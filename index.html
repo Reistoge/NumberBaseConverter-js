@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base N Calculator</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Base N Calculator</h1>
+        <label for="valueToTransform">Valor a transformar</label>
+        <input class="field" type="text" id="valueToTransform" placeholder="Valor a transformar">
+        <label for="baseInitial">Base Inicial (2-35)</label>
+        <input class="field" type="number" id="baseInitial" min="2" max="35" placeholder="Base (2-35)">
+        <label for="newBase">Nueva Base</label>
+        <input class="field" type="number" id="newBase" min="2" max="35" placeholder="Nueva Base (2-35)">
+        <label for="precision">Precision</label>
+        <input class="field" type="number" id="precision" placeholder="Valor precision">
+        <button type="button">Restablecer valores</button>
+        
+    </div>
+    <div class="container">
+        <h2>Resultados</h2>
+        <label for="base2">Base 2</label>
+        <input type="text" id="base2" placeholder="Valor en base 2" class="result" disabled>
+        <label for="base10">Base 10</label>
+        <input type="text" id="base10" placeholder="Valor en base 10" class="result" disabled>
+        <label for="base8">Base 8</label>
+        <input type="text" id="base8" placeholder="Valor en base 8" class="result"  disabled>
+        <label for="base16">Base 16</label>
+        <input type="text" id="base16" placeholder="Valor en base 16" class="result" disabled>
+        <label for="baseN">Base N</label>
+        <input type="text" id="baseN" placeholder="Valor en Base N" class="result" disabled>   
+    </div>
+
+</body>
+<script src="js\main.js"></script>
+<script src="js\BaseConversion.js"> </script>
+</html>

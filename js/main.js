@@ -1,22 +1,23 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("loaded"); // Add the "loaded" class to trigger the animation
 
     const inputs = document.querySelectorAll(".field"); // get all the inputs with the class "field".
     const resultsInputs = document.querySelectorAll(".result"); // Select all labels with the
     const resetButton = document.querySelector("button"); // Select the "reset" button
 
     // Attach events listeners to input fields
-    inputs.forEach(input => { 
+    inputs.forEach(input => {
 
         input.addEventListener("input", () => { // for each input we attach an event that waits to a input change.
             console.log(`Input changed: ${input.id}, New Value: ${input.value}`);
             // we get the input values from the html.
-            let valueToTransform = document.getElementById("valueToTransform").value;
+            let valueToTransform = document.getElementById("valueToTransform").value.toUpperCase(); // we convert the value to uppercase to avoid problems with the conversion.
             let baseInitial = document.getElementById("baseInitial").value;
             let newBase = document.getElementById("newBase").value;
             let precision = document.getElementById("precision").value;
-            
+
             resultsInputs.forEach(element => { // for each result label we calculate the conversion and set the value.
                 switch (element.id) {
                     case "base2":
@@ -53,9 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
             element.value = "";
         });
     });
-
-    
-});
-
  
+
+});
+ 
+
+
+
+
 

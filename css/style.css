@@ -59,6 +59,28 @@ button:hover {
     background: #6a11cb;
     transition: 0.3s;
 }
+
+/*
+    Animation for loading effect */
+ 
+body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 3s ease;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+ 
+ 
+
+.shake {
+    animation: shake 0.5s ease;
+}
 @media (max-width: 600px) {
     .container {
         padding: 15px;
